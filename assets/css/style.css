@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.png");
+  background: url("../img/bg.jpg");
   position: relative;
 }
 #hero .hero-container {
@@ -323,9 +323,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 #hero h2 {
-  color: #aeaeae;
+  color: #ffffff;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
   margin: 10px;
   color: #fff;
-  background: red;
+  background: rgba(0, 0, 0, 0.28);
 }
 #hero .btn-get-started:hover {
   transition: 0.5s;
@@ -1385,7 +1385,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/footer-bg.jpg") center center no-repeat;
+  background: url("../img/bg.jpg") center center no-repeat;
   color: #fff;
   font-size: 14px;
   position: relative;
