@@ -1,10 +1,3 @@
-/**
-* Template Name: Knight - v4.7.0
-* Template URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -334,17 +327,17 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   display: inline-block;
   padding: 14px 30px;
-  border-radius: 3px;
+  border-radius: 8px;
   margin: 10px;
   color: #fff;
-  background: red;
+  background: rgba(0, 0, 0, 0.40);
 }
 #hero .btn-get-started:hover {
   transition: 0.5s;
-  background: darkred;
+  background: rgba(0, 0, 0, 0.50);
   color: #fff;
 }
 @media (min-width: 1024px) {
@@ -1501,4 +1494,11 @@ section {
   text-align: center;
   font-size: 13px;
   padding-top: 5px;
+}
+.reglas {
+  width: 100%;
+  max-width: 900px;
+}
+.container-reglas {
+  align-items: center;
 }
