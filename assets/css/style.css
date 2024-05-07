@@ -325,8 +325,9 @@ h6 {
   padding: 0 15px;
 }
 #hero .hero-logo {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
+
 #hero h1 {
   margin: 0 0 30px 0;
   font-size: 48px;
@@ -1530,8 +1531,10 @@ section {
 }
 .reglas {
   width: 100%;
-  max-width: 900px;
+  max-width: 600px;
+  border-radius: 10px;
 }
+
 .container-reglas {
   align-items: center;
 }
@@ -1589,4 +1592,7 @@ section {
 .boton:hover {
   background: darkred;
   color: #fff;
+}
+.imagen-camino{
+  width: 100%;
 }
