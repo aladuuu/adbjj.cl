@@ -117,8 +117,8 @@ function getNextGrade(currentGrade) {
     case "blanco":
       return "Azul";
     case "azul":
-      return "Morado";
-    case "morado":
+      return "Purpura";
+    case "purpura":
       return "Marrón";
     case "marrón":
       return "Negro";
