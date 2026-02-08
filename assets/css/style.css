@@ -1015,27 +1015,28 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.preta {
-  background: #000;
-}
-.marrom {
-  background: #8b4513;
-}
-.roxa {
-  background: purple;
-}
 .team {
   background: #fff;
   padding: 60px 0;
 }
 .team .member {
   margin-bottom: 20px;
+  border: 1px solid #dbe1e6;
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(22, 30, 38, 0.08);
+  transition: box-shadow 0.25s ease;
 }
 .team .member .member-img {
   position: relative;
   overflow: hidden;
-  border-radius: 5px;
+  aspect-ratio: 4 / 3;
+}
+.team .member .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .team .member .social {
   position: absolute;
@@ -1044,7 +1045,7 @@ section {
   right: 0;
   height: 40px;
   opacity: 0;
-  transition: bottom ease-in-out 0.4s;
+  transition: bottom ease-in-out 0.4s, opacity ease-in-out 0.4s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1067,29 +1068,69 @@ section {
   font-size: 18px;
   margin: 0 2px;
 }
+.team .member.belt-preta .social {
+  background: #000;
+}
+.team .member.belt-marrom .social {
+  background: #8b4513;
+}
+.team .member.belt-roxa .social {
+  background: purple;
+}
+.team .member .member-info {
+  padding: 16px 16px 14px;
+}
 .team .member .member-info h4 {
   font-weight: 700;
-  margin: 15px 0 5px 0;
+  margin: 0;
   font-size: 18px;
 }
-.team .member .member-info span {
-  display: block;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 15px;
-  color: red;
-}
-.team .member .member-info p {
-  font-style: italic;
+.team .member .member-role {
+  margin: 6px 0 0;
   font-size: 14px;
-  line-height: 26px;
-  color: #888888;
+  line-height: 1.5;
+  color: #616a74;
+}
+.team .member .location-pill {
+  margin-top: 10px;
+  border: 1px solid #d6dbe0;
+  border-radius: 999px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #2d3741;
+  font-size: 13px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.team .member .location-pill:hover {
+  border-color: #af1d28;
+  color: #af1d28;
+}
+.team .member:hover,
+.team .member:focus-within,
+.team .member.is-active {
+  box-shadow: 0 12px 26px rgba(22, 30, 38, 0.14);
 }
 .team .member:hover .social {
   bottom: 0;
   opacity: 1;
-  transition: bottom ease-in-out 0.4s;
+}
+.team .member:focus-within .social,
+.team .member.is-active .social {
+  bottom: 0;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .team .member .member-img {
+    aspect-ratio: 11 / 10;
+  }
+}
+@media (max-width: 430px) {
+  .team .member .member-img {
+    aspect-ratio: 1 / 1;
+  }
 }
 
 /*--------------------------------------------------------------

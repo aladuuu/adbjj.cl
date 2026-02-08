@@ -259,6 +259,71 @@
   });
 
   /**
+   * Team cards mobile reveal
+   */
+  const teamCards = select("#equipo [data-card-reveal]", true);
+  if (teamCards.length) {
+    const touchPointer = window.matchMedia("(hover: none) and (pointer: coarse)");
+
+    const closeOtherCards = (currentCard) => {
+      teamCards.forEach((card) => {
+        if (card !== currentCard) {
+          card.classList.remove("is-active");
+        }
+      });
+    };
+
+    teamCards.forEach((card) => {
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      card.addEventListener(
+        "touchstart",
+        (event) => {
+          if (!event.changedTouches.length) return;
+          touchStartX = event.changedTouches[0].clientX;
+          touchStartY = event.changedTouches[0].clientY;
+        },
+        { passive: true }
+      );
+
+      card.addEventListener(
+        "touchend",
+        (event) => {
+          if (!event.changedTouches.length) return;
+
+          const deltaX = event.changedTouches[0].clientX - touchStartX;
+          const deltaY = event.changedTouches[0].clientY - touchStartY;
+          const isHorizontalSwipe =
+            Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY);
+
+          if (isHorizontalSwipe) {
+            closeOtherCards(card);
+            card.classList.add("is-active");
+          }
+        },
+        { passive: true }
+      );
+
+      card.addEventListener("click", (event) => {
+        if (!touchPointer.matches) return;
+        if (event.target.closest("a")) return;
+
+        const shouldOpen = !card.classList.contains("is-active");
+        closeOtherCards(card);
+        card.classList.toggle("is-active", shouldOpen);
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!touchPointer.matches) return;
+      if (event.target.closest("#equipo [data-card-reveal]")) return;
+
+      teamCards.forEach((card) => card.classList.remove("is-active"));
+    });
+  }
+
+  /**
    * Year
    */
 
