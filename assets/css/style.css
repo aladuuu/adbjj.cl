@@ -150,6 +150,25 @@ h6 {
 .navbar li:hover > a {
   color: red;
 }
+@media (max-width: 1199px) and (min-width: 992px) {
+  #header .logo img {
+    max-height: 52px;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    padding: 10px 0 10px 14px;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+  }
+}
+@media (max-width: 1080px) and (min-width: 992px) {
+  .navbar a,
+  .navbar a:focus {
+    padding-left: 10px;
+    font-size: 11.5px;
+  }
+}
 .navbar .dropdown ul {
   display: block;
   position: absolute;
