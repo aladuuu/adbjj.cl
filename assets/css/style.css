@@ -1696,6 +1696,101 @@ section {
   font-size: 13px;
   padding-top: 5px;
 }
+#footer.footer-revamp .footer-top {
+  text-align: left;
+  padding: 68px 0 30px;
+}
+#footer.footer-revamp .footer-top .footer-logo img {
+  height: 96px;
+}
+#footer.footer-revamp .footer-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 18px;
+  height: 100%;
+}
+#footer.footer-revamp .footer-brand p {
+  font-size: 14px;
+  font-style: normal;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+}
+#footer.footer-revamp h4 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+#footer.footer-revamp .footer-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#footer.footer-revamp .footer-links-list li + li {
+  margin-top: 8px;
+}
+#footer.footer-revamp .footer-links-list a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: color 0.2s ease;
+}
+#footer.footer-revamp .footer-links-list a:hover {
+  color: #fff;
+}
+#footer.footer-revamp .footer-links-list a i {
+  font-size: 13px;
+  color: red;
+}
+#footer.footer-revamp .footer-top .social-links {
+  margin-top: 22px;
+  text-align: left;
+}
+#footer.footer-revamp .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 22px;
+  padding-bottom: 24px;
+}
+#footer.footer-revamp .footer-bottom .copyright {
+  text-align: left;
+}
+#footer.footer-revamp .footer-bottom .credits {
+  padding-top: 0;
+  text-align: right;
+}
+#footer.footer-revamp .footer-bottom .credits a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+#footer.footer-revamp .footer-bottom .credits a:hover {
+  color: #fff;
+}
+@media (max-width: 991px) {
+  #footer.footer-revamp .footer-top {
+    padding-top: 54px;
+  }
+
+  #footer.footer-revamp .footer-top,
+  #footer.footer-revamp .footer-top .social-links,
+  #footer.footer-revamp .footer-bottom .copyright,
+  #footer.footer-revamp .footer-bottom .credits {
+    text-align: center;
+  }
+
+  #footer.footer-revamp .footer-bottom {
+    flex-direction: column;
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
+}
 .reglas {
   width: 100%;
   max-width: 600px;
